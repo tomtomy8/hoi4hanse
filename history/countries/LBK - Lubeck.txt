@@ -1,0 +1,108 @@
+capital = 58
+
+oob = "LBK_1936"
+
+if = {
+	limit= { has_dlc = "Man the Guns" }
+		set_naval_oob = "SCO_1936_naval_mtg"
+	else = {
+		set_naval_oob = "SCO_1936_naval_legacy"
+	}
+}
+
+set_research_slots = 3
+set_stability = 0.6
+set_war_support = 0.2
+
+add_ideas = {
+	LBK_anti_fascism
+	#laws
+	limited_exports
+	limited_conscription
+	partial_economic_mobilisation
+}
+
+set_technology = {
+ 	infantry_weapons = 1
+	infantry_weapons1 = 1	
+	tech_engineers = 1
+	tech_mountaineers = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	gwtank = 1
+	basic_light_tank = 1
+	basic_heavy_tank = 1
+	early_fighter = 1
+	fighter1 = 1
+	early_bomber = 1
+	tactical_bomber1 = 1
+	strategic_bomber1 = 1
+	CAS1 = 1
+	naval_bomber1 = 1
+}
+
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+	}
+	#set_naval_oob = "LBK_1936_naval_legacy"
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+	}
+	#set_naval_oob = "LBK_1936_naval_mtg"
+}
+
+add_political_power = 50
+set_convoys = 20
+
+set_popularities = {
+	democratic = 10
+	communism = 10
+	fascism = 60
+	neutrality = 20
+}
+
+set_politics = {
+	ruling_party = fascism
+	last_election = "1933.3.5"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_party_name = { 
+	ideology = neutrality
+	name = "Hanse"
+	long_name = "Hansepartei Lubeck"
+}
+
+set_party_name = { 
+	ideology = fascism
+	name = "NSDAP"
+	long_name = "NSDAP"
+}
+
+create_country_leader = {
+	name = "Hinrich Lohse"
+	desc = "Lohse"
+	picture = "gfx/leaders/LBK/Lohse.dds"
+	expire = "1965.1.1"
+	ideology = fascism_ideology
+	traits = {
+		dictator
+		great_survivor
+	}
+}
+

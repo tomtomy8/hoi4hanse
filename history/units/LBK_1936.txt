@@ -1,0 +1,28 @@
+division_template = {
+	name = "Infantry Division"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		infantry = { x = 3 y = 0 }
+		infantry = { x = 3 y = 1 }
+	}
+}
+
+units = {
+	division= {	
+		name = "1st Infantry Division"
+		location = 11305 # Lubeck
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2   #optional, otherwise starts with 0 expereince
+		start_equipment_factor = 0.3    #optional, otherwise starts with equipment factor of 1 (maximum)
+
+	}
+}
